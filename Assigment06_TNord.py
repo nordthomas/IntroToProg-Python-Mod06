@@ -101,8 +101,8 @@ class IO():
         """
         print('''
         Menu of Options
-        1) Add a new Task
-        2) Remove an existing Task
+        1) Add a New Task
+        2) Remove an Existing Task
         3) Save Data to File        
         4) Exit Program
         ''')
@@ -137,9 +137,9 @@ class IO():
 
         :return: (string, string) with task and priority
         """
-        task = input("Enter a task: ")
-        priority = input("Enter a priority: ")
-        return task, priority
+        task_name = input("Enter a task: ")
+        priority_level = input("Enter a priority: ")
+        return task_name, priority_level
 
     @staticmethod
     def input_task_to_remove():
@@ -180,7 +180,7 @@ while (True):
         continue  # to show the menu
 
     elif choice_str == '3':  # Save Data to File
-        table_lst = Processor .write_data_to_file(file_name=file_name_str, list_of_rows=table_lst)
+        table_lst = Processor.write_data_to_file(file_name=file_name_str, list_of_rows=table_lst)
         print("Data Saved!")
         continue  # to show the menu
 
